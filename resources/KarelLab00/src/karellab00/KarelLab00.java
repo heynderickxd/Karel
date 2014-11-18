@@ -11,7 +11,7 @@ import edu.fcps.karel2.Robot;
 
 public class KarelLab00 {
     public static void main(String[] args) {
-     Display.openWorld("maps/first.map");
+     Display.openWorld("../maps/first.map");
      Display.setSize(10, 10);
      Display.setSpeed(5);
      
