@@ -1,7 +1,7 @@
 /*
  * Swag License 
  */
-package karellab00;
+package karellabs;
 /**
  * @author heynderickxd
  */
