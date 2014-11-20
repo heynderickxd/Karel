@@ -6,7 +6,7 @@ import edu.fcps.karel2.Robot;
 /**
  * @author heynderickxd
  */
-public class karellab01 {
+public class KarelLab01 {
    public static void main (String[] args){
    Display.openWorld("../maps/school.map");
    Display.setSize(10, 10);
