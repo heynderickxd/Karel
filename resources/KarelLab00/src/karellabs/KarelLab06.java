@@ -29,8 +29,10 @@
        public static void task_02()	
       { //go to the beeper
          Robot temp = new Robot(1, 2, Display.EAST, 0);
-         while(temp.frontIsClear() && !temp.nextToABeeper()){
+         if(temp.frontIsClear() && !temp.nextToABeeper()){
              temp.move();
+         } else{
+             temp.pickBeeper();
          }
       }
        public static void task_03()	
@@ -43,7 +45,8 @@
        public static void task_04()	
       { //go to the wall, pick up all the beepers (max one per pile)
          Robot temp = new Robot(1, 4, Display.EAST, 0);
-          while(temp.frontIsClear()){
+         temp.pickBeeper();
+         while(temp.frontIsClear()){
              if(temp.nextToABeeper()){
                  temp.pickBeeper();
              }
