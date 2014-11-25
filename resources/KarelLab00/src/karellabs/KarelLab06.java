@@ -76,17 +76,17 @@
        public static void task_06()
       { //go to the end of the row of beepers, there is one gap
          Robot temp = new Robot(1, 6, Display.EAST, 0);
-         int c = temp.getX();
-         while (temp.frontIsClear() && c < 10) {
-            if(temp.nextToABeeper()){
-                 temp.move();
-                 c++;
-             } else { 
-                 temp.move();
-                 c++;
-             }
+        while (temp.nextToABeeper()){
+            temp.move();
         }
-      }
+        temp.move();
+            if(temp.nextToABeeper()){
+                while (temp.nextToABeeper()){
+                temp.move();
+                }
+            } 
+        }
+        
        public static void task_07() {
            Robot temp = new Robot(1,7,Display.EAST,0);
            while(temp.frontIsClear() || !temp.nextToABeeper()){
