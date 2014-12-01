@@ -7,21 +7,37 @@ import edu.fcps.karel2.Display;
 public class HillClimber extends Climber {
 
 	public HillClimber(int x) {
-		//TODO Call the appropriate superclass constructor
+            super(x);
 	}
 	
 	public void climbUpRight() {
-		//TODO Climb up one and across two
+            super.turnLeft();
+            super.move();
+            super.turnRight();
+            super.move();
+            super.move();
         }
 	public void climbUpLeft() {
-		//TODO Climb up one and across two
+	    super.turnRight();
+            super.move();
+            super.turnLeft();
+            super.move();
+            super.move();
 	}
 	
 	public void climbDownRight() {
-		//TODO Climb down one and across two
+            super.move();
+            super.move();
+            super.turnRight();
+            super.move();
+            super.turnLeft();
 	}
 	
 	public void climbDownLeft() {
-		//TODO Climb down one and across two
+           super.move();
+            super.move();
+            super.turnLeft();
+            super.move();
+            super.turnRight();
 	}
 }
