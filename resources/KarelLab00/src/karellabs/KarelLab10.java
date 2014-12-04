@@ -19,7 +19,7 @@ public class KarelLab10 {
     }
     public static void main(String[] args){
         
-         Display.openWorld("../maps/maze1.map");
+         Display.openWorld("../maps/maze3.map");
          Display.setSize(10, 10);
          Display.setSpeed(1);
          
