@@ -19,38 +19,35 @@ public class KarelLab10 {
     }
     public static void main(String[] args){
         
-         Display.openWorld("../maps/maze3.map");
+         Display.openWorld("../maps/maze1.map");
          Display.setSize(10, 10);
          Display.setSpeed(1);
          
          Athlete jo = new Athlete(1,1,Display.NORTH,0);
         //corner
         while(!jo.nextToABeeper()){
-            while(jo.frontIsClear()){
-             if(jo.frontIsClear() && jo.leftIsClear() && !jo.rightIsClear()){
-             left(jo);
-            } 
-            else if (jo.frontIsClear() && !jo.leftIsClear() && jo.rightIsClear()){
-             jo.turnRight();
-             jo.move();
-            }
-            jo.move();
-            if (jo.nextToABeeper()){
-                jo.pickBeeper();
-                return;
-            }
-            }
-            //look around 1
-            if (!jo.frontIsClear() && !jo.leftIsClear() && jo.rightIsClear()){
-                right(jo);
-            //look around 2
-            } else if (!jo.frontIsClear() && !jo.rightIsClear() && jo.leftIsClear()) {
-            left(jo); 
-            //uTurn
-            } else {
-                jo.turnAround();
-            }
+           jo.turnRight();
+           while(!jo.rightIsClear() && jo.frontIsClear() && !jo.leftIsClear()){
+               jo.move();
+           }
+           while(!jo.rightIsClear()){
+               if(!jo.frontIsClear() && !jo.leftIsClear() && !jo.rightIsClear()){
+                   uTurn(jo);
+               } else if (!jo.frontIsClear() && !jo.leftIsClear() && jo.rightIsClear()){
+                   right(jo);
+               } else if(!jo.frontIsClear() && !jo.rightIsClear() && jo.leftIsClear()){
+                   jo.turnLeft();
+                   jo.move();
+                   jo.turnRight();
+                   jo.move();
+                   jo.turnRight();
+                   jo.move();
+               } else if (jo.frontIsClear() && !jo.rightIsClear() && jo.leftIsClear()){
+                   left(jo);
+               }
+           }
+           
             }
         jo.pickBeeper();
     }
-    }
+}
