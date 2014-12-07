@@ -5,7 +5,7 @@ package karellabs;
    import edu.fcps.karel2.Robot;
    import edu.fcps.karel2.Display;
 public class KarelLab09 {
-    public static void shiftMain(Athlete guy){
+    private static void shiftMain(Athlete guy){
         while (guy.nextToABeeper()){
             guy.pickBeeper();
         }
@@ -16,13 +16,13 @@ public class KarelLab09 {
         guy.turnAround();
         guy.move();
     }
-    public static void shiftReset(Athlete luk){
+    private static void shiftReset(Athlete luk){
     while(!luk.nextToABeeper()){
             luk.move();
         }
         luk.turnAround();    
     }
-    public static void shift(Athlete arg){
+    private static void shift(Athlete arg){
         while(6 > arg.getX()){
             arg.move();
         }
@@ -40,7 +40,7 @@ public class KarelLab09 {
     
     public static void main(String[] args){
         
-         Display.openWorld("../maps/Pile1.map");
+         Display.openWorld("../maps/Pile2.map");
          Display.setSize(18, 16);
          Display.setSpeed(10);
          

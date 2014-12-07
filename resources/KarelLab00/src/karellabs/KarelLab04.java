@@ -6,7 +6,7 @@ package karellabs;
   import edu.fcps.karel2.Display;
   import edu.fcps.karel2.Robot;
 public class KarelLab04 {
-	public static void takeTheField(Athlete arg) {
+	private static void takeTheField(Athlete arg) {
 		arg.move();
 		arg.move();
 		arg.move();
@@ -19,7 +19,7 @@ public class KarelLab04 {
      public static void main(String[] args) {
         Display.openWorld("../maps/arena.map");
         Display.setSize(10, 10);
-        Display.setSpeed(5);
+        Display.setSpeed(10);
      
         Athlete roy = new Athlete(1,1,Display.NORTH,0); 
         Athlete dan = new Athlete(1,1,Display.NORTH,0);
