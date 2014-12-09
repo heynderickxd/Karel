@@ -10,6 +10,7 @@ public class HillClimber extends Climber {
             super(x);
 	}
 	
+        @Override
 	public void climbUpRight() {
             super.turnLeft();
             super.move();
@@ -17,6 +18,7 @@ public class HillClimber extends Climber {
             super.move();
             super.move();
         }
+        @Override
 	public void climbUpLeft() {
 	    super.turnRight();
             super.move();
@@ -24,7 +26,7 @@ public class HillClimber extends Climber {
             super.move();
             super.move();
 	}
-	
+	@Override
 	public void climbDownRight() {
             super.move();
             super.move();
@@ -32,7 +34,7 @@ public class HillClimber extends Climber {
             super.move();
             super.turnLeft();
 	}
-	
+	@Override
 	public void climbDownLeft() {
            super.move();
             super.move();
